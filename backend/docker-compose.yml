@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+gridsense-backend:
+build: .
+container_name: gridsense_fastapi_backend
+ports:
+  - "8000:8000"
+volumes:
+  - .:/app # Live hot-reloading on host file edits
+environment:
+  - PORT=8000
+restart: always
