@@ -8,7 +8,7 @@ import {
   TrendingUp, BarChart2, Cpu, Database, Eye, Code, FileText, Sliders, RefreshCw
 } from 'lucide-react';
 
-const API_BASE_URL = "http://localhost:8000";
+const API_BASE_URL = "https://kjhwr-lgbj.onrender.com";
 
 // Custom Tooltip for Area Chart
 const CustomAreaTooltip = ({ active, payload, label }) => {
@@ -176,8 +176,8 @@ export default function App() {
               <button
                 onClick={() => setViewMode('executive')}
                 className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all ${viewMode === 'executive'
-                    ? 'bg-emerald-500 text-slate-950 shadow-md font-semibold'
-                    : 'text-slate-400 hover:text-white'
+                  ? 'bg-emerald-500 text-slate-950 shadow-md font-semibold'
+                  : 'text-slate-400 hover:text-white'
                   }`}
               >
                 <Eye className="w-3.5 h-3.5" />
@@ -186,8 +186,8 @@ export default function App() {
               <button
                 onClick={() => setViewMode('technical')}
                 className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all ${viewMode === 'technical'
-                    ? 'bg-cyan-500 text-slate-950 shadow-md font-semibold'
-                    : 'text-slate-400 hover:text-white'
+                  ? 'bg-cyan-500 text-slate-950 shadow-md font-semibold'
+                  : 'text-slate-400 hover:text-white'
                   }`}
               >
                 <Code className="w-3.5 h-3.5" />
@@ -227,8 +227,8 @@ export default function App() {
                 key={preset.value}
                 onClick={() => { setDateRange(preset.value); setSelectedDay('all'); }}
                 className={`px-2.5 py-1 rounded-md text-xs font-medium transition-all ${dateRange === preset.value && selectedDay === 'all'
-                    ? 'bg-slate-700 text-emerald-300 border border-emerald-500/40'
-                    : 'bg-slate-800/60 text-slate-400 hover:bg-slate-800 hover:text-slate-200 border border-slate-800'
+                  ? 'bg-slate-700 text-emerald-300 border border-emerald-500/40'
+                  : 'bg-slate-800/60 text-slate-400 hover:bg-slate-800 hover:text-slate-200 border border-slate-800'
                   }`}
               >
                 {preset.label}
@@ -259,10 +259,10 @@ export default function App() {
             </div>
 
             <div className={`flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border text-xs ${apiError
-                ? 'bg-rose-500/10 border-rose-500/20 text-rose-400'
-                : loading
-                  ? 'bg-amber-500/10 border-amber-500/20 text-amber-400'
-                  : 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400'
+              ? 'bg-rose-500/10 border-rose-500/20 text-rose-400'
+              : loading
+                ? 'bg-amber-500/10 border-amber-500/20 text-amber-400'
+                : 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400'
               }`}>
               {loading ? (
                 <RefreshCw className="w-3 h-3 animate-spin" />
